@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dest'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'app.js',
   },
   module: {
@@ -69,7 +69,7 @@ module.exports = {
     new VueLoaderPlugin(),
   ],
   devServer: {
-    contentBase: __dirname,
+    contentBase: path.resolve(__dirname, 'docs'),
     open: true,
   },
 }
